@@ -1,0 +1,30 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+package basedata;
+
+message Algorithm {
+    int32 id = 1;
+    string name = 2;
+    int64 crated_at_ts = 3;
+    int64 updated_at_ts = 4;
+    string created_at = 5;
+    string updated_at = 6;
+}
+
+message CountResponse {
+    int32 count = 1;
+}
+
+message GetIDRequest {
+    int32 id = 1;
+}
+
+message GetIDResponse {
+    Algorithm algorithm = 1;
+}
+
+
+service AlgorithmService {
+    rpc Count (google.protobuf.Empty) returns (CountResponse) {}
+    rpc GetID (GetIDRequest) returns (GetIDResponse) {}
+}

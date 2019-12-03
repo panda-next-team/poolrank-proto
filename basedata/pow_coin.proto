@@ -1,0 +1,46 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+package basedata;
+
+message POW_Coin {
+    int32 id = 1;
+    string name = 2;
+    string en_name = 3;
+    string en_tag = 4;
+    int32 max_supply = 5;
+    int32 algorithm_id = 6;
+    string block_time = 7;
+    string website_url = 8;
+    string github_url = 9;
+    string icon = 10;
+    string intro = 11;
+    int32 status = 12;
+    int32 list_order = 13;
+    int32 created_at_ts = 14;
+    int32 updated_at_ts = 15;
+    string created_at = 16;
+    string updated_at = 17;
+}
+
+
+
+message CountResponse {
+    int32 total = 1;
+}
+
+message GetIDRequest {
+    int32 id = 1;
+}
+
+message GetIDResponse {
+    POW_Coin coin = 1;
+}
+
+
+
+service POWCoinService {
+    rpc Count (google.protobuf.Empty) returns (CountResponse) {
+    }
+    rpc GetID (GetIDRequest) returns (GetIDResponse) {
+    }
+}
