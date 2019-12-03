@@ -23,7 +23,6 @@ message POW_Coin {
 }
 
 
-
 message CountPowCoinsResponse {
     int32 total = 1;
 }
@@ -37,10 +36,9 @@ message GetPowCoinResponse {
 }
 
 
-
 service POWCoinService {
-    rpc Count (google.protobuf.Empty) returns (CountPowCoinsResponse) {
+    rpc CountPowCoins (google.protobuf.Empty) returns (CountPowCoinsResponse) {
     }
-    rpc GetID (GetPowCoinRequest) returns (GetPowCoinResponse) {
+    rpc GetPowCoin (GetPowCoinRequest) returns (GetPowCoinResponse) {
     }
 }
