@@ -136,7 +136,7 @@ func (m *Pool) GetUpdatedAt() string {
 	return ""
 }
 
-type Address struct {
+type PoolAddress struct {
 	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Address              string   `protobuf:"bytes,2,opt,name=address,proto3" json:"address,omitempty"`
 	PoolId               int32    `protobuf:"varint,3,opt,name=pool_id,json=poolId,proto3" json:"pool_id,omitempty"`
@@ -151,95 +151,95 @@ type Address struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *Address) Reset()         { *m = Address{} }
-func (m *Address) String() string { return proto.CompactTextString(m) }
-func (*Address) ProtoMessage()    {}
-func (*Address) Descriptor() ([]byte, []int) {
+func (m *PoolAddress) Reset()         { *m = PoolAddress{} }
+func (m *PoolAddress) String() string { return proto.CompactTextString(m) }
+func (*PoolAddress) ProtoMessage()    {}
+func (*PoolAddress) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8a14d8612184524f, []int{1}
 }
 
-func (m *Address) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Address.Unmarshal(m, b)
+func (m *PoolAddress) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PoolAddress.Unmarshal(m, b)
 }
-func (m *Address) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Address.Marshal(b, m, deterministic)
+func (m *PoolAddress) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PoolAddress.Marshal(b, m, deterministic)
 }
-func (m *Address) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Address.Merge(m, src)
+func (m *PoolAddress) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PoolAddress.Merge(m, src)
 }
-func (m *Address) XXX_Size() int {
-	return xxx_messageInfo_Address.Size(m)
+func (m *PoolAddress) XXX_Size() int {
+	return xxx_messageInfo_PoolAddress.Size(m)
 }
-func (m *Address) XXX_DiscardUnknown() {
-	xxx_messageInfo_Address.DiscardUnknown(m)
+func (m *PoolAddress) XXX_DiscardUnknown() {
+	xxx_messageInfo_PoolAddress.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_Address proto.InternalMessageInfo
+var xxx_messageInfo_PoolAddress proto.InternalMessageInfo
 
-func (m *Address) GetId() int32 {
+func (m *PoolAddress) GetId() int32 {
 	if m != nil {
 		return m.Id
 	}
 	return 0
 }
 
-func (m *Address) GetAddress() string {
+func (m *PoolAddress) GetAddress() string {
 	if m != nil {
 		return m.Address
 	}
 	return ""
 }
 
-func (m *Address) GetPoolId() int32 {
+func (m *PoolAddress) GetPoolId() int32 {
 	if m != nil {
 		return m.PoolId
 	}
 	return 0
 }
 
-func (m *Address) GetCoinId() int32 {
+func (m *PoolAddress) GetCoinId() int32 {
 	if m != nil {
 		return m.CoinId
 	}
 	return 0
 }
 
-func (m *Address) GetType() int32 {
+func (m *PoolAddress) GetType() int32 {
 	if m != nil {
 		return m.Type
 	}
 	return 0
 }
 
-func (m *Address) GetCreatedAtTs() int32 {
+func (m *PoolAddress) GetCreatedAtTs() int32 {
 	if m != nil {
 		return m.CreatedAtTs
 	}
 	return 0
 }
 
-func (m *Address) GetUpdatedAtTs() int32 {
+func (m *PoolAddress) GetUpdatedAtTs() int32 {
 	if m != nil {
 		return m.UpdatedAtTs
 	}
 	return 0
 }
 
-func (m *Address) GetCreatedAt() string {
+func (m *PoolAddress) GetCreatedAt() string {
 	if m != nil {
 		return m.CreatedAt
 	}
 	return ""
 }
 
-func (m *Address) GetUpdatedAt() string {
+func (m *PoolAddress) GetUpdatedAt() string {
 	if m != nil {
 		return m.UpdatedAt
 	}
 	return ""
 }
 
-type CoinbaseTag struct {
+type PoolCoinbaseTag struct {
 	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	PoolId               int32    `protobuf:"varint,2,opt,name=pool_id,json=poolId,proto3" json:"pool_id,omitempty"`
 	Tag                  string   `protobuf:"bytes,3,opt,name=tag,proto3" json:"tag,omitempty"`
@@ -252,198 +252,198 @@ type CoinbaseTag struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *CoinbaseTag) Reset()         { *m = CoinbaseTag{} }
-func (m *CoinbaseTag) String() string { return proto.CompactTextString(m) }
-func (*CoinbaseTag) ProtoMessage()    {}
-func (*CoinbaseTag) Descriptor() ([]byte, []int) {
+func (m *PoolCoinbaseTag) Reset()         { *m = PoolCoinbaseTag{} }
+func (m *PoolCoinbaseTag) String() string { return proto.CompactTextString(m) }
+func (*PoolCoinbaseTag) ProtoMessage()    {}
+func (*PoolCoinbaseTag) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8a14d8612184524f, []int{2}
 }
 
-func (m *CoinbaseTag) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_CoinbaseTag.Unmarshal(m, b)
+func (m *PoolCoinbaseTag) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PoolCoinbaseTag.Unmarshal(m, b)
 }
-func (m *CoinbaseTag) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_CoinbaseTag.Marshal(b, m, deterministic)
+func (m *PoolCoinbaseTag) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PoolCoinbaseTag.Marshal(b, m, deterministic)
 }
-func (m *CoinbaseTag) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CoinbaseTag.Merge(m, src)
+func (m *PoolCoinbaseTag) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PoolCoinbaseTag.Merge(m, src)
 }
-func (m *CoinbaseTag) XXX_Size() int {
-	return xxx_messageInfo_CoinbaseTag.Size(m)
+func (m *PoolCoinbaseTag) XXX_Size() int {
+	return xxx_messageInfo_PoolCoinbaseTag.Size(m)
 }
-func (m *CoinbaseTag) XXX_DiscardUnknown() {
-	xxx_messageInfo_CoinbaseTag.DiscardUnknown(m)
+func (m *PoolCoinbaseTag) XXX_DiscardUnknown() {
+	xxx_messageInfo_PoolCoinbaseTag.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_CoinbaseTag proto.InternalMessageInfo
+var xxx_messageInfo_PoolCoinbaseTag proto.InternalMessageInfo
 
-func (m *CoinbaseTag) GetId() int32 {
+func (m *PoolCoinbaseTag) GetId() int32 {
 	if m != nil {
 		return m.Id
 	}
 	return 0
 }
 
-func (m *CoinbaseTag) GetPoolId() int32 {
+func (m *PoolCoinbaseTag) GetPoolId() int32 {
 	if m != nil {
 		return m.PoolId
 	}
 	return 0
 }
 
-func (m *CoinbaseTag) GetTag() string {
+func (m *PoolCoinbaseTag) GetTag() string {
 	if m != nil {
 		return m.Tag
 	}
 	return ""
 }
 
-func (m *CoinbaseTag) GetCreatedAtTs() int32 {
+func (m *PoolCoinbaseTag) GetCreatedAtTs() int32 {
 	if m != nil {
 		return m.CreatedAtTs
 	}
 	return 0
 }
 
-func (m *CoinbaseTag) GetUpdatedAtTs() int32 {
+func (m *PoolCoinbaseTag) GetUpdatedAtTs() int32 {
 	if m != nil {
 		return m.UpdatedAtTs
 	}
 	return 0
 }
 
-func (m *CoinbaseTag) GetCreatedAt() string {
+func (m *PoolCoinbaseTag) GetCreatedAt() string {
 	if m != nil {
 		return m.CreatedAt
 	}
 	return ""
 }
 
-func (m *CoinbaseTag) GetUpdatedAt() string {
+func (m *PoolCoinbaseTag) GetUpdatedAt() string {
 	if m != nil {
 		return m.UpdatedAt
 	}
 	return ""
 }
 
-type CountResponse struct {
+type CountPoolsResponse struct {
 	Total                int32    `protobuf:"varint,1,opt,name=total,proto3" json:"total,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *CountResponse) Reset()         { *m = CountResponse{} }
-func (m *CountResponse) String() string { return proto.CompactTextString(m) }
-func (*CountResponse) ProtoMessage()    {}
-func (*CountResponse) Descriptor() ([]byte, []int) {
+func (m *CountPoolsResponse) Reset()         { *m = CountPoolsResponse{} }
+func (m *CountPoolsResponse) String() string { return proto.CompactTextString(m) }
+func (*CountPoolsResponse) ProtoMessage()    {}
+func (*CountPoolsResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8a14d8612184524f, []int{3}
 }
 
-func (m *CountResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_CountResponse.Unmarshal(m, b)
+func (m *CountPoolsResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_CountPoolsResponse.Unmarshal(m, b)
 }
-func (m *CountResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_CountResponse.Marshal(b, m, deterministic)
+func (m *CountPoolsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_CountPoolsResponse.Marshal(b, m, deterministic)
 }
-func (m *CountResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CountResponse.Merge(m, src)
+func (m *CountPoolsResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CountPoolsResponse.Merge(m, src)
 }
-func (m *CountResponse) XXX_Size() int {
-	return xxx_messageInfo_CountResponse.Size(m)
+func (m *CountPoolsResponse) XXX_Size() int {
+	return xxx_messageInfo_CountPoolsResponse.Size(m)
 }
-func (m *CountResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_CountResponse.DiscardUnknown(m)
+func (m *CountPoolsResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_CountPoolsResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_CountResponse proto.InternalMessageInfo
+var xxx_messageInfo_CountPoolsResponse proto.InternalMessageInfo
 
-func (m *CountResponse) GetTotal() int32 {
+func (m *CountPoolsResponse) GetTotal() int32 {
 	if m != nil {
 		return m.Total
 	}
 	return 0
 }
 
-type GetIDRequest struct {
+type GetPoolRequest struct {
 	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *GetIDRequest) Reset()         { *m = GetIDRequest{} }
-func (m *GetIDRequest) String() string { return proto.CompactTextString(m) }
-func (*GetIDRequest) ProtoMessage()    {}
-func (*GetIDRequest) Descriptor() ([]byte, []int) {
+func (m *GetPoolRequest) Reset()         { *m = GetPoolRequest{} }
+func (m *GetPoolRequest) String() string { return proto.CompactTextString(m) }
+func (*GetPoolRequest) ProtoMessage()    {}
+func (*GetPoolRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8a14d8612184524f, []int{4}
 }
 
-func (m *GetIDRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetIDRequest.Unmarshal(m, b)
+func (m *GetPoolRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPoolRequest.Unmarshal(m, b)
 }
-func (m *GetIDRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetIDRequest.Marshal(b, m, deterministic)
+func (m *GetPoolRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPoolRequest.Marshal(b, m, deterministic)
 }
-func (m *GetIDRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetIDRequest.Merge(m, src)
+func (m *GetPoolRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPoolRequest.Merge(m, src)
 }
-func (m *GetIDRequest) XXX_Size() int {
-	return xxx_messageInfo_GetIDRequest.Size(m)
+func (m *GetPoolRequest) XXX_Size() int {
+	return xxx_messageInfo_GetPoolRequest.Size(m)
 }
-func (m *GetIDRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetIDRequest.DiscardUnknown(m)
+func (m *GetPoolRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPoolRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GetIDRequest proto.InternalMessageInfo
+var xxx_messageInfo_GetPoolRequest proto.InternalMessageInfo
 
-func (m *GetIDRequest) GetId() int32 {
+func (m *GetPoolRequest) GetId() int32 {
 	if m != nil {
 		return m.Id
 	}
 	return 0
 }
 
-type GetIDResponse struct {
+type GetPoolResponse struct {
 	Pool                 *Pool    `protobuf:"bytes,1,opt,name=pool,proto3" json:"pool,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *GetIDResponse) Reset()         { *m = GetIDResponse{} }
-func (m *GetIDResponse) String() string { return proto.CompactTextString(m) }
-func (*GetIDResponse) ProtoMessage()    {}
-func (*GetIDResponse) Descriptor() ([]byte, []int) {
+func (m *GetPoolResponse) Reset()         { *m = GetPoolResponse{} }
+func (m *GetPoolResponse) String() string { return proto.CompactTextString(m) }
+func (*GetPoolResponse) ProtoMessage()    {}
+func (*GetPoolResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8a14d8612184524f, []int{5}
 }
 
-func (m *GetIDResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetIDResponse.Unmarshal(m, b)
+func (m *GetPoolResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPoolResponse.Unmarshal(m, b)
 }
-func (m *GetIDResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetIDResponse.Marshal(b, m, deterministic)
+func (m *GetPoolResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPoolResponse.Marshal(b, m, deterministic)
 }
-func (m *GetIDResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetIDResponse.Merge(m, src)
+func (m *GetPoolResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPoolResponse.Merge(m, src)
 }
-func (m *GetIDResponse) XXX_Size() int {
-	return xxx_messageInfo_GetIDResponse.Size(m)
+func (m *GetPoolResponse) XXX_Size() int {
+	return xxx_messageInfo_GetPoolResponse.Size(m)
 }
-func (m *GetIDResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetIDResponse.DiscardUnknown(m)
+func (m *GetPoolResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPoolResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GetIDResponse proto.InternalMessageInfo
+var xxx_messageInfo_GetPoolResponse proto.InternalMessageInfo
 
-func (m *GetIDResponse) GetPool() *Pool {
+func (m *GetPoolResponse) GetPool() *Pool {
 	if m != nil {
 		return m.Pool
 	}
 	return nil
 }
 
-type GetAddressesRequest struct {
+type GetPoolAddressesRequest struct {
 	PoolId               int32    `protobuf:"varint,1,opt,name=pool_id,json=poolId,proto3" json:"pool_id,omitempty"`
 	CoinId               int32    `protobuf:"varint,2,opt,name=coin_id,json=coinId,proto3" json:"coin_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -451,156 +451,156 @@ type GetAddressesRequest struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *GetAddressesRequest) Reset()         { *m = GetAddressesRequest{} }
-func (m *GetAddressesRequest) String() string { return proto.CompactTextString(m) }
-func (*GetAddressesRequest) ProtoMessage()    {}
-func (*GetAddressesRequest) Descriptor() ([]byte, []int) {
+func (m *GetPoolAddressesRequest) Reset()         { *m = GetPoolAddressesRequest{} }
+func (m *GetPoolAddressesRequest) String() string { return proto.CompactTextString(m) }
+func (*GetPoolAddressesRequest) ProtoMessage()    {}
+func (*GetPoolAddressesRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8a14d8612184524f, []int{6}
 }
 
-func (m *GetAddressesRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetAddressesRequest.Unmarshal(m, b)
+func (m *GetPoolAddressesRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPoolAddressesRequest.Unmarshal(m, b)
 }
-func (m *GetAddressesRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetAddressesRequest.Marshal(b, m, deterministic)
+func (m *GetPoolAddressesRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPoolAddressesRequest.Marshal(b, m, deterministic)
 }
-func (m *GetAddressesRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetAddressesRequest.Merge(m, src)
+func (m *GetPoolAddressesRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPoolAddressesRequest.Merge(m, src)
 }
-func (m *GetAddressesRequest) XXX_Size() int {
-	return xxx_messageInfo_GetAddressesRequest.Size(m)
+func (m *GetPoolAddressesRequest) XXX_Size() int {
+	return xxx_messageInfo_GetPoolAddressesRequest.Size(m)
 }
-func (m *GetAddressesRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetAddressesRequest.DiscardUnknown(m)
+func (m *GetPoolAddressesRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPoolAddressesRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GetAddressesRequest proto.InternalMessageInfo
+var xxx_messageInfo_GetPoolAddressesRequest proto.InternalMessageInfo
 
-func (m *GetAddressesRequest) GetPoolId() int32 {
+func (m *GetPoolAddressesRequest) GetPoolId() int32 {
 	if m != nil {
 		return m.PoolId
 	}
 	return 0
 }
 
-func (m *GetAddressesRequest) GetCoinId() int32 {
+func (m *GetPoolAddressesRequest) GetCoinId() int32 {
 	if m != nil {
 		return m.CoinId
 	}
 	return 0
 }
 
-type GetAddressesResponse struct {
-	Addresses            []*Address `protobuf:"bytes,1,rep,name=addresses,proto3" json:"addresses,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}   `json:"-"`
-	XXX_unrecognized     []byte     `json:"-"`
-	XXX_sizecache        int32      `json:"-"`
+type GetPoolAddressesResponse struct {
+	Addresses            []*PoolAddress `protobuf:"bytes,1,rep,name=addresses,proto3" json:"addresses,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
 }
 
-func (m *GetAddressesResponse) Reset()         { *m = GetAddressesResponse{} }
-func (m *GetAddressesResponse) String() string { return proto.CompactTextString(m) }
-func (*GetAddressesResponse) ProtoMessage()    {}
-func (*GetAddressesResponse) Descriptor() ([]byte, []int) {
+func (m *GetPoolAddressesResponse) Reset()         { *m = GetPoolAddressesResponse{} }
+func (m *GetPoolAddressesResponse) String() string { return proto.CompactTextString(m) }
+func (*GetPoolAddressesResponse) ProtoMessage()    {}
+func (*GetPoolAddressesResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8a14d8612184524f, []int{7}
 }
 
-func (m *GetAddressesResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetAddressesResponse.Unmarshal(m, b)
+func (m *GetPoolAddressesResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPoolAddressesResponse.Unmarshal(m, b)
 }
-func (m *GetAddressesResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetAddressesResponse.Marshal(b, m, deterministic)
+func (m *GetPoolAddressesResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPoolAddressesResponse.Marshal(b, m, deterministic)
 }
-func (m *GetAddressesResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetAddressesResponse.Merge(m, src)
+func (m *GetPoolAddressesResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPoolAddressesResponse.Merge(m, src)
 }
-func (m *GetAddressesResponse) XXX_Size() int {
-	return xxx_messageInfo_GetAddressesResponse.Size(m)
+func (m *GetPoolAddressesResponse) XXX_Size() int {
+	return xxx_messageInfo_GetPoolAddressesResponse.Size(m)
 }
-func (m *GetAddressesResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetAddressesResponse.DiscardUnknown(m)
+func (m *GetPoolAddressesResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPoolAddressesResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GetAddressesResponse proto.InternalMessageInfo
+var xxx_messageInfo_GetPoolAddressesResponse proto.InternalMessageInfo
 
-func (m *GetAddressesResponse) GetAddresses() []*Address {
+func (m *GetPoolAddressesResponse) GetAddresses() []*PoolAddress {
 	if m != nil {
 		return m.Addresses
 	}
 	return nil
 }
 
-type GetCoinbaseTagsRequest struct {
+type GetPoolCoinbaseTagsRequest struct {
 	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *GetCoinbaseTagsRequest) Reset()         { *m = GetCoinbaseTagsRequest{} }
-func (m *GetCoinbaseTagsRequest) String() string { return proto.CompactTextString(m) }
-func (*GetCoinbaseTagsRequest) ProtoMessage()    {}
-func (*GetCoinbaseTagsRequest) Descriptor() ([]byte, []int) {
+func (m *GetPoolCoinbaseTagsRequest) Reset()         { *m = GetPoolCoinbaseTagsRequest{} }
+func (m *GetPoolCoinbaseTagsRequest) String() string { return proto.CompactTextString(m) }
+func (*GetPoolCoinbaseTagsRequest) ProtoMessage()    {}
+func (*GetPoolCoinbaseTagsRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8a14d8612184524f, []int{8}
 }
 
-func (m *GetCoinbaseTagsRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetCoinbaseTagsRequest.Unmarshal(m, b)
+func (m *GetPoolCoinbaseTagsRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPoolCoinbaseTagsRequest.Unmarshal(m, b)
 }
-func (m *GetCoinbaseTagsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetCoinbaseTagsRequest.Marshal(b, m, deterministic)
+func (m *GetPoolCoinbaseTagsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPoolCoinbaseTagsRequest.Marshal(b, m, deterministic)
 }
-func (m *GetCoinbaseTagsRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetCoinbaseTagsRequest.Merge(m, src)
+func (m *GetPoolCoinbaseTagsRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPoolCoinbaseTagsRequest.Merge(m, src)
 }
-func (m *GetCoinbaseTagsRequest) XXX_Size() int {
-	return xxx_messageInfo_GetCoinbaseTagsRequest.Size(m)
+func (m *GetPoolCoinbaseTagsRequest) XXX_Size() int {
+	return xxx_messageInfo_GetPoolCoinbaseTagsRequest.Size(m)
 }
-func (m *GetCoinbaseTagsRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetCoinbaseTagsRequest.DiscardUnknown(m)
+func (m *GetPoolCoinbaseTagsRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPoolCoinbaseTagsRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GetCoinbaseTagsRequest proto.InternalMessageInfo
+var xxx_messageInfo_GetPoolCoinbaseTagsRequest proto.InternalMessageInfo
 
-func (m *GetCoinbaseTagsRequest) GetId() int32 {
+func (m *GetPoolCoinbaseTagsRequest) GetId() int32 {
 	if m != nil {
 		return m.Id
 	}
 	return 0
 }
 
-type GetCoinbaseTagsResponse struct {
-	Tags                 []*CoinbaseTag `protobuf:"bytes,1,rep,name=tags,proto3" json:"tags,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
-	XXX_unrecognized     []byte         `json:"-"`
-	XXX_sizecache        int32          `json:"-"`
+type GetPoolCoinbaseTagsResponse struct {
+	Tags                 []*PoolCoinbaseTag `protobuf:"bytes,1,rep,name=tags,proto3" json:"tags,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
+	XXX_unrecognized     []byte             `json:"-"`
+	XXX_sizecache        int32              `json:"-"`
 }
 
-func (m *GetCoinbaseTagsResponse) Reset()         { *m = GetCoinbaseTagsResponse{} }
-func (m *GetCoinbaseTagsResponse) String() string { return proto.CompactTextString(m) }
-func (*GetCoinbaseTagsResponse) ProtoMessage()    {}
-func (*GetCoinbaseTagsResponse) Descriptor() ([]byte, []int) {
+func (m *GetPoolCoinbaseTagsResponse) Reset()         { *m = GetPoolCoinbaseTagsResponse{} }
+func (m *GetPoolCoinbaseTagsResponse) String() string { return proto.CompactTextString(m) }
+func (*GetPoolCoinbaseTagsResponse) ProtoMessage()    {}
+func (*GetPoolCoinbaseTagsResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8a14d8612184524f, []int{9}
 }
 
-func (m *GetCoinbaseTagsResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetCoinbaseTagsResponse.Unmarshal(m, b)
+func (m *GetPoolCoinbaseTagsResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPoolCoinbaseTagsResponse.Unmarshal(m, b)
 }
-func (m *GetCoinbaseTagsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetCoinbaseTagsResponse.Marshal(b, m, deterministic)
+func (m *GetPoolCoinbaseTagsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPoolCoinbaseTagsResponse.Marshal(b, m, deterministic)
 }
-func (m *GetCoinbaseTagsResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetCoinbaseTagsResponse.Merge(m, src)
+func (m *GetPoolCoinbaseTagsResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPoolCoinbaseTagsResponse.Merge(m, src)
 }
-func (m *GetCoinbaseTagsResponse) XXX_Size() int {
-	return xxx_messageInfo_GetCoinbaseTagsResponse.Size(m)
+func (m *GetPoolCoinbaseTagsResponse) XXX_Size() int {
+	return xxx_messageInfo_GetPoolCoinbaseTagsResponse.Size(m)
 }
-func (m *GetCoinbaseTagsResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetCoinbaseTagsResponse.DiscardUnknown(m)
+func (m *GetPoolCoinbaseTagsResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPoolCoinbaseTagsResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GetCoinbaseTagsResponse proto.InternalMessageInfo
+var xxx_messageInfo_GetPoolCoinbaseTagsResponse proto.InternalMessageInfo
 
-func (m *GetCoinbaseTagsResponse) GetTags() []*CoinbaseTag {
+func (m *GetPoolCoinbaseTagsResponse) GetTags() []*PoolCoinbaseTag {
 	if m != nil {
 		return m.Tags
 	}
@@ -609,59 +609,59 @@ func (m *GetCoinbaseTagsResponse) GetTags() []*CoinbaseTag {
 
 func init() {
 	proto.RegisterType((*Pool)(nil), "basedata.Pool")
-	proto.RegisterType((*Address)(nil), "basedata.Address")
-	proto.RegisterType((*CoinbaseTag)(nil), "basedata.CoinbaseTag")
-	proto.RegisterType((*CountResponse)(nil), "basedata.CountResponse")
-	proto.RegisterType((*GetIDRequest)(nil), "basedata.GetIDRequest")
-	proto.RegisterType((*GetIDResponse)(nil), "basedata.GetIDResponse")
-	proto.RegisterType((*GetAddressesRequest)(nil), "basedata.GetAddressesRequest")
-	proto.RegisterType((*GetAddressesResponse)(nil), "basedata.GetAddressesResponse")
-	proto.RegisterType((*GetCoinbaseTagsRequest)(nil), "basedata.GetCoinbaseTagsRequest")
-	proto.RegisterType((*GetCoinbaseTagsResponse)(nil), "basedata.GetCoinbaseTagsResponse")
+	proto.RegisterType((*PoolAddress)(nil), "basedata.PoolAddress")
+	proto.RegisterType((*PoolCoinbaseTag)(nil), "basedata.PoolCoinbaseTag")
+	proto.RegisterType((*CountPoolsResponse)(nil), "basedata.CountPoolsResponse")
+	proto.RegisterType((*GetPoolRequest)(nil), "basedata.GetPoolRequest")
+	proto.RegisterType((*GetPoolResponse)(nil), "basedata.GetPoolResponse")
+	proto.RegisterType((*GetPoolAddressesRequest)(nil), "basedata.GetPoolAddressesRequest")
+	proto.RegisterType((*GetPoolAddressesResponse)(nil), "basedata.GetPoolAddressesResponse")
+	proto.RegisterType((*GetPoolCoinbaseTagsRequest)(nil), "basedata.GetPoolCoinbaseTagsRequest")
+	proto.RegisterType((*GetPoolCoinbaseTagsResponse)(nil), "basedata.GetPoolCoinbaseTagsResponse")
 }
 
 func init() { proto.RegisterFile("pool.proto", fileDescriptor_8a14d8612184524f) }
 
 var fileDescriptor_8a14d8612184524f = []byte{
-	// 593 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x8c, 0x54, 0xdf, 0x6e, 0xd3, 0x3e,
-	0x18, 0x5d, 0xb2, 0xfc, 0x69, 0xbe, 0xfc, 0xba, 0x1f, 0x98, 0xd1, 0x46, 0x45, 0x1d, 0xc5, 0x12,
-	0x52, 0xb9, 0x49, 0xa5, 0xee, 0x8e, 0xbb, 0x69, 0x43, 0x55, 0xaf, 0x86, 0xc2, 0x90, 0xb8, 0xab,
-	0xdc, 0xc6, 0x54, 0x91, 0xb2, 0x38, 0xc4, 0x0e, 0x68, 0xef, 0xc2, 0x43, 0xf0, 0x24, 0xbc, 0x12,
-	0xc8, 0x8e, 0xd3, 0xa4, 0x2d, 0xed, 0x76, 0x67, 0x7f, 0xe7, 0x7c, 0x27, 0x3e, 0xe7, 0x73, 0x0c,
-	0x90, 0x33, 0x96, 0x86, 0x79, 0xc1, 0x04, 0x43, 0x9d, 0x25, 0xe1, 0x34, 0x26, 0x82, 0x0c, 0x5e,
-	0xad, 0x19, 0x5b, 0xa7, 0x74, 0xa2, 0xea, 0xcb, 0xf2, 0xeb, 0x84, 0xde, 0xe7, 0xe2, 0xa1, 0xa2,
-	0xe1, 0x9f, 0x26, 0x58, 0x1f, 0x19, 0x4b, 0xd1, 0x19, 0x98, 0x49, 0x1c, 0x18, 0x23, 0x63, 0x6c,
-	0x47, 0x66, 0x12, 0x23, 0x04, 0x56, 0x46, 0xee, 0x69, 0x60, 0x8e, 0x8c, 0xb1, 0x17, 0xa9, 0x35,
-	0x7a, 0x0d, 0xfe, 0x0f, 0xba, 0xe4, 0x89, 0xa0, 0x8b, 0xb2, 0x48, 0x83, 0x53, 0x05, 0x81, 0x2e,
-	0x7d, 0x2e, 0x52, 0xd9, 0x94, 0xac, 0x58, 0x16, 0x58, 0x55, 0x93, 0x5c, 0xa3, 0x1e, 0x38, 0x5c,
-	0x10, 0x51, 0xf2, 0xc0, 0x56, 0xe2, 0x7a, 0x87, 0x86, 0x00, 0x69, 0xc2, 0xc5, 0x82, 0x15, 0x31,
-	0x2d, 0x02, 0x47, 0x61, 0x9e, 0xac, 0xdc, 0xca, 0x02, 0xc2, 0xd0, 0x5d, 0x15, 0x94, 0x08, 0x1a,
-	0x2f, 0x88, 0x58, 0x08, 0x1e, 0xb8, 0x8a, 0xe1, 0xeb, 0xe2, 0x95, 0xb8, 0xe3, 0x92, 0x53, 0xe6,
-	0x71, 0x8b, 0xd3, 0xa9, 0x38, 0xba, 0xa8, 0x38, 0x43, 0x80, 0x46, 0x27, 0xf0, 0xd4, 0xc1, 0xbc,
-	0x8d, 0x88, 0x84, 0x1b, 0x89, 0x00, 0x2a, 0x78, 0xd3, 0x8f, 0xff, 0x18, 0xe0, 0x5e, 0xc5, 0x71,
-	0x41, 0x39, 0xdf, 0x4b, 0x28, 0x00, 0x97, 0x54, 0x90, 0x0e, 0xa9, 0xde, 0xa2, 0x3e, 0xb8, 0x72,
-	0x12, 0x8b, 0x24, 0x56, 0x19, 0xd9, 0x91, 0x23, 0xb7, 0xf3, 0x58, 0x02, 0x2b, 0x96, 0x64, 0x12,
-	0xb0, 0x2a, 0x40, 0x6e, 0xe7, 0x2a, 0x6d, 0xf1, 0x90, 0x53, 0x1d, 0x91, 0x5a, 0xef, 0x27, 0xe0,
-	0x3c, 0x21, 0x01, 0xf7, 0xb1, 0x04, 0x3a, 0xc7, 0x13, 0xf0, 0x76, 0x13, 0xf8, 0x6d, 0x80, 0x7f,
-	0xcd, 0x92, 0x4c, 0x5e, 0xa7, 0x3b, 0xb2, 0xde, 0x4b, 0xa1, 0xe5, 0xd5, 0xdc, 0xf2, 0xfa, 0x0c,
-	0x4e, 0x05, 0x59, 0xeb, 0x4b, 0x22, 0x97, 0xfb, 0x86, 0xac, 0x27, 0x18, 0xb2, 0x1f, 0x33, 0xe4,
-	0x1c, 0x37, 0xe4, 0xee, 0x1a, 0x7a, 0x0b, 0xdd, 0x6b, 0x56, 0x66, 0x22, 0xa2, 0x3c, 0x67, 0x19,
-	0xa7, 0xe8, 0x1c, 0x6c, 0xc1, 0x04, 0x49, 0xb5, 0xa9, 0x6a, 0x83, 0x2f, 0xe0, 0xbf, 0x19, 0x15,
-	0xf3, 0x9b, 0x88, 0x7e, 0x2b, 0x29, 0x17, 0xbb, 0xbe, 0xf1, 0x25, 0x74, 0x35, 0xae, 0x65, 0x30,
-	0x58, 0xd2, 0xb9, 0xa2, 0xf8, 0xd3, 0xb3, 0xb0, 0xfe, 0xff, 0x42, 0xf9, 0x7b, 0x45, 0x0a, 0xc3,
-	0x33, 0x78, 0x31, 0xa3, 0x42, 0x5f, 0x28, 0xca, 0x6b, 0xed, 0x56, 0x86, 0xc6, 0xa1, 0xfb, 0x62,
-	0xb6, 0xef, 0x0b, 0x9e, 0xc1, 0xf9, 0xb6, 0x90, 0x3e, 0xc4, 0x04, 0x3c, 0x52, 0x17, 0x03, 0x63,
-	0x74, 0x3a, 0xf6, 0xa7, 0xcf, 0x9b, 0x93, 0x68, 0x7e, 0xd4, 0x70, 0xf0, 0x18, 0x7a, 0x33, 0x2a,
-	0x5a, 0x03, 0xe6, 0x87, 0x0c, 0xdf, 0x40, 0x7f, 0x8f, 0xa9, 0xbf, 0xfa, 0x0e, 0x2c, 0x41, 0xd6,
-	0xf5, 0x07, 0x5f, 0x36, 0x1f, 0x6c, 0xb1, 0x23, 0x45, 0x99, 0xfe, 0x32, 0xc1, 0x97, 0x81, 0x7c,
-	0xa2, 0xc5, 0xf7, 0x64, 0x45, 0xd1, 0x7b, 0xb0, 0xd5, 0x34, 0x50, 0x2f, 0xac, 0x9e, 0xa9, 0xb0,
-	0x7e, 0xa6, 0xc2, 0x0f, 0xf2, 0x99, 0x1a, 0xf4, 0xdb, 0x6a, 0xad, 0xb1, 0xe1, 0x13, 0xd9, 0xab,
-	0x46, 0x80, 0x7a, 0x0d, 0xa7, 0x3d, 0xb3, 0x76, 0xef, 0xd6, 0xac, 0xf0, 0x09, 0xba, 0x55, 0xe3,
-	0xdd, 0x04, 0x88, 0x86, 0x5b, 0xd4, 0xdd, 0x09, 0x0d, 0x2e, 0x0e, 0xc1, 0x1b, 0xc1, 0x2f, 0xf0,
-	0xff, 0x4e, 0x3c, 0x68, 0xb4, 0xd5, 0xf4, 0x8f, 0x8c, 0x07, 0x6f, 0x8e, 0x30, 0x6a, 0xe5, 0xa5,
-	0xa3, 0x12, 0xb9, 0xfc, 0x1b, 0x00, 0x00, 0xff, 0xff, 0x88, 0xa9, 0xb6, 0x64, 0xde, 0x05, 0x00,
-	0x00,
+	// 598 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x8c, 0x54, 0x51, 0x6f, 0xd3, 0x3c,
+	0x14, 0xfd, 0x92, 0xa5, 0xc9, 0x72, 0xab, 0xaf, 0x9b, 0x0c, 0x6c, 0x5e, 0xc6, 0x44, 0x89, 0x40,
+	0xaa, 0x10, 0x64, 0x52, 0x27, 0xde, 0x99, 0x06, 0x42, 0x13, 0x48, 0x43, 0x61, 0x3c, 0xf1, 0x50,
+	0xb9, 0xb5, 0xa9, 0x22, 0x65, 0x71, 0x88, 0x1d, 0xd0, 0x9e, 0xf9, 0x1b, 0xfc, 0x2a, 0x9e, 0xf8,
+	0x39, 0xc8, 0x8e, 0xd3, 0xa4, 0x4d, 0xd7, 0xee, 0xcd, 0xbe, 0xe7, 0xdc, 0x63, 0x9f, 0x73, 0x9d,
+	0x00, 0xe4, 0x9c, 0xa7, 0x51, 0x5e, 0x70, 0xc9, 0xd1, 0xee, 0x94, 0x08, 0x46, 0x89, 0x24, 0xc1,
+	0xf1, 0x9c, 0xf3, 0x79, 0xca, 0x4e, 0x75, 0x7d, 0x5a, 0x7e, 0x3b, 0x65, 0x37, 0xb9, 0xbc, 0xad,
+	0x68, 0xe1, 0x6f, 0x1b, 0x9c, 0x4f, 0x9c, 0xa7, 0x68, 0x00, 0x76, 0x42, 0xb1, 0x35, 0xb4, 0x46,
+	0xbd, 0xd8, 0x4e, 0x28, 0x42, 0xe0, 0x64, 0xe4, 0x86, 0x61, 0x7b, 0x68, 0x8d, 0xfc, 0x58, 0xaf,
+	0xd1, 0x13, 0xe8, 0xff, 0x64, 0x53, 0x91, 0x48, 0x36, 0x29, 0x8b, 0x14, 0xef, 0x68, 0x08, 0x4c,
+	0xe9, 0x4b, 0x91, 0xaa, 0xa6, 0x64, 0xc6, 0x33, 0xec, 0x54, 0x4d, 0x6a, 0x8d, 0x0e, 0xc0, 0x15,
+	0x92, 0xc8, 0x52, 0xe0, 0x9e, 0x16, 0x37, 0x3b, 0x74, 0x02, 0x90, 0x26, 0x42, 0x4e, 0x78, 0x41,
+	0x59, 0x81, 0x5d, 0x8d, 0xf9, 0xaa, 0x72, 0xa5, 0x0a, 0x28, 0x84, 0xff, 0x67, 0x05, 0x23, 0x92,
+	0xd1, 0x09, 0x91, 0x13, 0x29, 0xb0, 0xa7, 0x19, 0x7d, 0x53, 0x3c, 0x97, 0xd7, 0x42, 0x71, 0xca,
+	0x9c, 0xb6, 0x38, 0xbb, 0x15, 0xc7, 0x14, 0x35, 0xe7, 0x04, 0xa0, 0xd1, 0xc1, 0xbe, 0xbe, 0x98,
+	0xbf, 0x10, 0x51, 0x70, 0x23, 0x81, 0xa1, 0x82, 0x17, 0xfd, 0xe1, 0x2f, 0x1b, 0xfa, 0x2a, 0x9e,
+	0x73, 0x4a, 0x0b, 0x26, 0x44, 0x27, 0x25, 0x0c, 0x1e, 0xa9, 0x20, 0x13, 0x54, 0xbd, 0x45, 0x87,
+	0xe0, 0xa9, 0x69, 0x4c, 0x12, 0xaa, 0x73, 0xea, 0xc5, 0xae, 0xda, 0x5e, 0x52, 0x05, 0xcc, 0x78,
+	0x92, 0x29, 0xc0, 0xa9, 0x00, 0xb5, 0xbd, 0xd4, 0x89, 0xcb, 0xdb, 0x9c, 0x99, 0x98, 0xf4, 0xba,
+	0x9b, 0x82, 0x7b, 0x8f, 0x14, 0xbc, 0x6d, 0x29, 0xec, 0x6e, 0x4e, 0xc1, 0x5f, 0x4d, 0xe1, 0x8f,
+	0x05, 0x7b, 0x2a, 0x85, 0x0b, 0x9e, 0x64, 0xea, 0x59, 0x5d, 0x93, 0x79, 0x27, 0x89, 0x96, 0x5f,
+	0x7b, 0xc9, 0xef, 0x3e, 0xec, 0x48, 0x32, 0x37, 0x8f, 0x45, 0x2d, 0xbb, 0xa6, 0x9c, 0x7b, 0x98,
+	0xea, 0x6d, 0x33, 0xe5, 0x6e, 0x36, 0xe5, 0xad, 0x9a, 0x7a, 0x01, 0xe8, 0x82, 0x97, 0x99, 0x54,
+	0xc6, 0x44, 0xcc, 0x44, 0xce, 0x33, 0xc1, 0xd0, 0x43, 0xe8, 0x49, 0x2e, 0x49, 0x6a, 0x9c, 0x55,
+	0x9b, 0x70, 0x08, 0x83, 0xf7, 0x4c, 0x33, 0x63, 0xf6, 0xbd, 0x64, 0x42, 0xae, 0xda, 0x0f, 0x5f,
+	0xc3, 0xde, 0x82, 0x61, 0xa4, 0x42, 0x70, 0x54, 0x04, 0x9a, 0xd4, 0x1f, 0x0f, 0xa2, 0xfa, 0x83,
+	0x8c, 0x34, 0x4b, 0x63, 0xe1, 0x07, 0x38, 0x34, 0x6d, 0xe6, 0x85, 0x31, 0x51, 0x9f, 0xd0, 0x0a,
+	0xd4, 0xba, 0xeb, 0x01, 0xd9, 0xed, 0x07, 0x14, 0x5e, 0x01, 0xee, 0x8a, 0x99, 0xcb, 0x9c, 0x81,
+	0x4f, 0xea, 0x22, 0xb6, 0x86, 0x3b, 0xa3, 0xfe, 0xf8, 0xd1, 0xf2, 0x8d, 0x4c, 0x4f, 0xdc, 0xf0,
+	0xc2, 0x97, 0x10, 0x18, 0xc1, 0xd6, 0xe4, 0xc5, 0x5d, 0x11, 0x7c, 0x84, 0xe3, 0xb5, 0x6c, 0x73,
+	0x83, 0x57, 0xe0, 0x48, 0x32, 0xaf, 0x0f, 0x3f, 0x5a, 0x3e, 0xbc, 0xd5, 0x11, 0x6b, 0xda, 0xf8,
+	0xaf, 0xf9, 0xf2, 0x3e, 0xb3, 0xe2, 0x47, 0x32, 0x63, 0xe8, 0x2d, 0x40, 0x33, 0x2e, 0x74, 0x10,
+	0x55, 0x3f, 0xb5, 0xa8, 0xfe, 0xa9, 0x45, 0xef, 0xd4, 0x4f, 0x2d, 0x78, 0xdc, 0xc8, 0x76, 0x87,
+	0x1b, 0xfe, 0x87, 0xde, 0x80, 0x67, 0xee, 0x88, 0x70, 0x43, 0x5d, 0x9e, 0x6d, 0x70, 0xb4, 0x06,
+	0x59, 0x28, 0x7c, 0x85, 0xfd, 0xd5, 0x90, 0xd1, 0xd3, 0x4e, 0xc3, 0xea, 0x34, 0x83, 0x70, 0x13,
+	0x65, 0x21, 0x4e, 0xe1, 0xc1, 0x9a, 0x08, 0xd1, 0xb3, 0x4e, 0xf3, 0x9a, 0x79, 0x04, 0xcf, 0xb7,
+	0xb0, 0xea, 0x53, 0xa6, 0xae, 0x0e, 0xed, 0xec, 0x5f, 0x00, 0x00, 0x00, 0xff, 0xff, 0x39, 0x5b,
+	0xea, 0xf1, 0x2f, 0x06, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -676,10 +676,10 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type PoolServiceClient interface {
-	Count(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CountResponse, error)
-	GetID(ctx context.Context, in *GetIDRequest, opts ...grpc.CallOption) (*GetIDResponse, error)
-	GetAddresses(ctx context.Context, in *GetAddressesRequest, opts ...grpc.CallOption) (*GetAddressesResponse, error)
-	GetCoinbaseTags(ctx context.Context, in *GetCoinbaseTagsRequest, opts ...grpc.CallOption) (*GetCoinbaseTagsResponse, error)
+	CountPools(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CountPoolsResponse, error)
+	GetPool(ctx context.Context, in *GetPoolRequest, opts ...grpc.CallOption) (*GetPoolResponse, error)
+	GetPoolAddresses(ctx context.Context, in *GetPoolAddressesRequest, opts ...grpc.CallOption) (*GetPoolAddressesResponse, error)
+	GetPoolCoinbaseTags(ctx context.Context, in *GetPoolCoinbaseTagsRequest, opts ...grpc.CallOption) (*GetPoolCoinbaseTagsResponse, error)
 }
 
 type poolServiceClient struct {
@@ -690,36 +690,36 @@ func NewPoolServiceClient(cc *grpc.ClientConn) PoolServiceClient {
 	return &poolServiceClient{cc}
 }
 
-func (c *poolServiceClient) Count(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CountResponse, error) {
-	out := new(CountResponse)
-	err := c.cc.Invoke(ctx, "/basedata.PoolService/Count", in, out, opts...)
+func (c *poolServiceClient) CountPools(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CountPoolsResponse, error) {
+	out := new(CountPoolsResponse)
+	err := c.cc.Invoke(ctx, "/basedata.PoolService/CountPools", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *poolServiceClient) GetID(ctx context.Context, in *GetIDRequest, opts ...grpc.CallOption) (*GetIDResponse, error) {
-	out := new(GetIDResponse)
-	err := c.cc.Invoke(ctx, "/basedata.PoolService/GetID", in, out, opts...)
+func (c *poolServiceClient) GetPool(ctx context.Context, in *GetPoolRequest, opts ...grpc.CallOption) (*GetPoolResponse, error) {
+	out := new(GetPoolResponse)
+	err := c.cc.Invoke(ctx, "/basedata.PoolService/GetPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *poolServiceClient) GetAddresses(ctx context.Context, in *GetAddressesRequest, opts ...grpc.CallOption) (*GetAddressesResponse, error) {
-	out := new(GetAddressesResponse)
-	err := c.cc.Invoke(ctx, "/basedata.PoolService/GetAddresses", in, out, opts...)
+func (c *poolServiceClient) GetPoolAddresses(ctx context.Context, in *GetPoolAddressesRequest, opts ...grpc.CallOption) (*GetPoolAddressesResponse, error) {
+	out := new(GetPoolAddressesResponse)
+	err := c.cc.Invoke(ctx, "/basedata.PoolService/GetPoolAddresses", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *poolServiceClient) GetCoinbaseTags(ctx context.Context, in *GetCoinbaseTagsRequest, opts ...grpc.CallOption) (*GetCoinbaseTagsResponse, error) {
-	out := new(GetCoinbaseTagsResponse)
-	err := c.cc.Invoke(ctx, "/basedata.PoolService/GetCoinbaseTags", in, out, opts...)
+func (c *poolServiceClient) GetPoolCoinbaseTags(ctx context.Context, in *GetPoolCoinbaseTagsRequest, opts ...grpc.CallOption) (*GetPoolCoinbaseTagsResponse, error) {
+	out := new(GetPoolCoinbaseTagsResponse)
+	err := c.cc.Invoke(ctx, "/basedata.PoolService/GetPoolCoinbaseTags", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -728,101 +728,101 @@ func (c *poolServiceClient) GetCoinbaseTags(ctx context.Context, in *GetCoinbase
 
 // PoolServiceServer is the server API for PoolService service.
 type PoolServiceServer interface {
-	Count(context.Context, *empty.Empty) (*CountResponse, error)
-	GetID(context.Context, *GetIDRequest) (*GetIDResponse, error)
-	GetAddresses(context.Context, *GetAddressesRequest) (*GetAddressesResponse, error)
-	GetCoinbaseTags(context.Context, *GetCoinbaseTagsRequest) (*GetCoinbaseTagsResponse, error)
+	CountPools(context.Context, *empty.Empty) (*CountPoolsResponse, error)
+	GetPool(context.Context, *GetPoolRequest) (*GetPoolResponse, error)
+	GetPoolAddresses(context.Context, *GetPoolAddressesRequest) (*GetPoolAddressesResponse, error)
+	GetPoolCoinbaseTags(context.Context, *GetPoolCoinbaseTagsRequest) (*GetPoolCoinbaseTagsResponse, error)
 }
 
 // UnimplementedPoolServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedPoolServiceServer struct {
 }
 
-func (*UnimplementedPoolServiceServer) Count(ctx context.Context, req *empty.Empty) (*CountResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Count not implemented")
+func (*UnimplementedPoolServiceServer) CountPools(ctx context.Context, req *empty.Empty) (*CountPoolsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CountPools not implemented")
 }
-func (*UnimplementedPoolServiceServer) GetID(ctx context.Context, req *GetIDRequest) (*GetIDResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetID not implemented")
+func (*UnimplementedPoolServiceServer) GetPool(ctx context.Context, req *GetPoolRequest) (*GetPoolResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPool not implemented")
 }
-func (*UnimplementedPoolServiceServer) GetAddresses(ctx context.Context, req *GetAddressesRequest) (*GetAddressesResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetAddresses not implemented")
+func (*UnimplementedPoolServiceServer) GetPoolAddresses(ctx context.Context, req *GetPoolAddressesRequest) (*GetPoolAddressesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPoolAddresses not implemented")
 }
-func (*UnimplementedPoolServiceServer) GetCoinbaseTags(ctx context.Context, req *GetCoinbaseTagsRequest) (*GetCoinbaseTagsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCoinbaseTags not implemented")
+func (*UnimplementedPoolServiceServer) GetPoolCoinbaseTags(ctx context.Context, req *GetPoolCoinbaseTagsRequest) (*GetPoolCoinbaseTagsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPoolCoinbaseTags not implemented")
 }
 
 func RegisterPoolServiceServer(s *grpc.Server, srv PoolServiceServer) {
 	s.RegisterService(&_PoolService_serviceDesc, srv)
 }
 
-func _PoolService_Count_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PoolService_CountPools_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(empty.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PoolServiceServer).Count(ctx, in)
+		return srv.(PoolServiceServer).CountPools(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/basedata.PoolService/Count",
+		FullMethod: "/basedata.PoolService/CountPools",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PoolServiceServer).Count(ctx, req.(*empty.Empty))
+		return srv.(PoolServiceServer).CountPools(ctx, req.(*empty.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PoolService_GetID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetIDRequest)
+func _PoolService_GetPool_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPoolRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PoolServiceServer).GetID(ctx, in)
+		return srv.(PoolServiceServer).GetPool(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/basedata.PoolService/GetID",
+		FullMethod: "/basedata.PoolService/GetPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PoolServiceServer).GetID(ctx, req.(*GetIDRequest))
+		return srv.(PoolServiceServer).GetPool(ctx, req.(*GetPoolRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PoolService_GetAddresses_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetAddressesRequest)
+func _PoolService_GetPoolAddresses_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPoolAddressesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PoolServiceServer).GetAddresses(ctx, in)
+		return srv.(PoolServiceServer).GetPoolAddresses(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/basedata.PoolService/GetAddresses",
+		FullMethod: "/basedata.PoolService/GetPoolAddresses",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PoolServiceServer).GetAddresses(ctx, req.(*GetAddressesRequest))
+		return srv.(PoolServiceServer).GetPoolAddresses(ctx, req.(*GetPoolAddressesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PoolService_GetCoinbaseTags_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetCoinbaseTagsRequest)
+func _PoolService_GetPoolCoinbaseTags_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPoolCoinbaseTagsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PoolServiceServer).GetCoinbaseTags(ctx, in)
+		return srv.(PoolServiceServer).GetPoolCoinbaseTags(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/basedata.PoolService/GetCoinbaseTags",
+		FullMethod: "/basedata.PoolService/GetPoolCoinbaseTags",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PoolServiceServer).GetCoinbaseTags(ctx, req.(*GetCoinbaseTagsRequest))
+		return srv.(PoolServiceServer).GetPoolCoinbaseTags(ctx, req.(*GetPoolCoinbaseTagsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -832,20 +832,20 @@ var _PoolService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*PoolServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "Count",
-			Handler:    _PoolService_Count_Handler,
+			MethodName: "CountPools",
+			Handler:    _PoolService_CountPools_Handler,
 		},
 		{
-			MethodName: "GetID",
-			Handler:    _PoolService_GetID_Handler,
+			MethodName: "GetPool",
+			Handler:    _PoolService_GetPool_Handler,
 		},
 		{
-			MethodName: "GetAddresses",
-			Handler:    _PoolService_GetAddresses_Handler,
+			MethodName: "GetPoolAddresses",
+			Handler:    _PoolService_GetPoolAddresses_Handler,
 		},
 		{
-			MethodName: "GetCoinbaseTags",
-			Handler:    _PoolService_GetCoinbaseTags_Handler,
+			MethodName: "GetPoolCoinbaseTags",
+			Handler:    _PoolService_GetPoolCoinbaseTags_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

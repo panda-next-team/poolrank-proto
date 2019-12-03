@@ -104,117 +104,117 @@ func (m *Algorithm) GetUpdatedAt() string {
 	return ""
 }
 
-type CountResponse struct {
+type CountAlgorithmsResponse struct {
 	Count                int32    `protobuf:"varint,1,opt,name=count,proto3" json:"count,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *CountResponse) Reset()         { *m = CountResponse{} }
-func (m *CountResponse) String() string { return proto.CompactTextString(m) }
-func (*CountResponse) ProtoMessage()    {}
-func (*CountResponse) Descriptor() ([]byte, []int) {
+func (m *CountAlgorithmsResponse) Reset()         { *m = CountAlgorithmsResponse{} }
+func (m *CountAlgorithmsResponse) String() string { return proto.CompactTextString(m) }
+func (*CountAlgorithmsResponse) ProtoMessage()    {}
+func (*CountAlgorithmsResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8c381a4f1e580eed, []int{1}
 }
 
-func (m *CountResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_CountResponse.Unmarshal(m, b)
+func (m *CountAlgorithmsResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_CountAlgorithmsResponse.Unmarshal(m, b)
 }
-func (m *CountResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_CountResponse.Marshal(b, m, deterministic)
+func (m *CountAlgorithmsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_CountAlgorithmsResponse.Marshal(b, m, deterministic)
 }
-func (m *CountResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CountResponse.Merge(m, src)
+func (m *CountAlgorithmsResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CountAlgorithmsResponse.Merge(m, src)
 }
-func (m *CountResponse) XXX_Size() int {
-	return xxx_messageInfo_CountResponse.Size(m)
+func (m *CountAlgorithmsResponse) XXX_Size() int {
+	return xxx_messageInfo_CountAlgorithmsResponse.Size(m)
 }
-func (m *CountResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_CountResponse.DiscardUnknown(m)
+func (m *CountAlgorithmsResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_CountAlgorithmsResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_CountResponse proto.InternalMessageInfo
+var xxx_messageInfo_CountAlgorithmsResponse proto.InternalMessageInfo
 
-func (m *CountResponse) GetCount() int32 {
+func (m *CountAlgorithmsResponse) GetCount() int32 {
 	if m != nil {
 		return m.Count
 	}
 	return 0
 }
 
-type GetIDRequest struct {
+type GetAlgorithmRequest struct {
 	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *GetIDRequest) Reset()         { *m = GetIDRequest{} }
-func (m *GetIDRequest) String() string { return proto.CompactTextString(m) }
-func (*GetIDRequest) ProtoMessage()    {}
-func (*GetIDRequest) Descriptor() ([]byte, []int) {
+func (m *GetAlgorithmRequest) Reset()         { *m = GetAlgorithmRequest{} }
+func (m *GetAlgorithmRequest) String() string { return proto.CompactTextString(m) }
+func (*GetAlgorithmRequest) ProtoMessage()    {}
+func (*GetAlgorithmRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8c381a4f1e580eed, []int{2}
 }
 
-func (m *GetIDRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetIDRequest.Unmarshal(m, b)
+func (m *GetAlgorithmRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetAlgorithmRequest.Unmarshal(m, b)
 }
-func (m *GetIDRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetIDRequest.Marshal(b, m, deterministic)
+func (m *GetAlgorithmRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetAlgorithmRequest.Marshal(b, m, deterministic)
 }
-func (m *GetIDRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetIDRequest.Merge(m, src)
+func (m *GetAlgorithmRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAlgorithmRequest.Merge(m, src)
 }
-func (m *GetIDRequest) XXX_Size() int {
-	return xxx_messageInfo_GetIDRequest.Size(m)
+func (m *GetAlgorithmRequest) XXX_Size() int {
+	return xxx_messageInfo_GetAlgorithmRequest.Size(m)
 }
-func (m *GetIDRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetIDRequest.DiscardUnknown(m)
+func (m *GetAlgorithmRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetAlgorithmRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GetIDRequest proto.InternalMessageInfo
+var xxx_messageInfo_GetAlgorithmRequest proto.InternalMessageInfo
 
-func (m *GetIDRequest) GetId() int32 {
+func (m *GetAlgorithmRequest) GetId() int32 {
 	if m != nil {
 		return m.Id
 	}
 	return 0
 }
 
-type GetIDResponse struct {
+type GetAlgorithmResponse struct {
 	Algorithm            *Algorithm `protobuf:"bytes,1,opt,name=algorithm,proto3" json:"algorithm,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}   `json:"-"`
 	XXX_unrecognized     []byte     `json:"-"`
 	XXX_sizecache        int32      `json:"-"`
 }
 
-func (m *GetIDResponse) Reset()         { *m = GetIDResponse{} }
-func (m *GetIDResponse) String() string { return proto.CompactTextString(m) }
-func (*GetIDResponse) ProtoMessage()    {}
-func (*GetIDResponse) Descriptor() ([]byte, []int) {
+func (m *GetAlgorithmResponse) Reset()         { *m = GetAlgorithmResponse{} }
+func (m *GetAlgorithmResponse) String() string { return proto.CompactTextString(m) }
+func (*GetAlgorithmResponse) ProtoMessage()    {}
+func (*GetAlgorithmResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_8c381a4f1e580eed, []int{3}
 }
 
-func (m *GetIDResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetIDResponse.Unmarshal(m, b)
+func (m *GetAlgorithmResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetAlgorithmResponse.Unmarshal(m, b)
 }
-func (m *GetIDResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetIDResponse.Marshal(b, m, deterministic)
+func (m *GetAlgorithmResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetAlgorithmResponse.Marshal(b, m, deterministic)
 }
-func (m *GetIDResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetIDResponse.Merge(m, src)
+func (m *GetAlgorithmResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetAlgorithmResponse.Merge(m, src)
 }
-func (m *GetIDResponse) XXX_Size() int {
-	return xxx_messageInfo_GetIDResponse.Size(m)
+func (m *GetAlgorithmResponse) XXX_Size() int {
+	return xxx_messageInfo_GetAlgorithmResponse.Size(m)
 }
-func (m *GetIDResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetIDResponse.DiscardUnknown(m)
+func (m *GetAlgorithmResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetAlgorithmResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GetIDResponse proto.InternalMessageInfo
+var xxx_messageInfo_GetAlgorithmResponse proto.InternalMessageInfo
 
-func (m *GetIDResponse) GetAlgorithm() *Algorithm {
+func (m *GetAlgorithmResponse) GetAlgorithm() *Algorithm {
 	if m != nil {
 		return m.Algorithm
 	}
@@ -223,35 +223,35 @@ func (m *GetIDResponse) GetAlgorithm() *Algorithm {
 
 func init() {
 	proto.RegisterType((*Algorithm)(nil), "basedata.Algorithm")
-	proto.RegisterType((*CountResponse)(nil), "basedata.CountResponse")
-	proto.RegisterType((*GetIDRequest)(nil), "basedata.GetIDRequest")
-	proto.RegisterType((*GetIDResponse)(nil), "basedata.GetIDResponse")
+	proto.RegisterType((*CountAlgorithmsResponse)(nil), "basedata.CountAlgorithmsResponse")
+	proto.RegisterType((*GetAlgorithmRequest)(nil), "basedata.GetAlgorithmRequest")
+	proto.RegisterType((*GetAlgorithmResponse)(nil), "basedata.GetAlgorithmResponse")
 }
 
 func init() { proto.RegisterFile("algorithm.proto", fileDescriptor_8c381a4f1e580eed) }
 
 var fileDescriptor_8c381a4f1e580eed = []byte{
-	// 313 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x5c, 0x90, 0xcf, 0x4e, 0xf2, 0x40,
-	0x14, 0xc5, 0x29, 0x50, 0xf2, 0xf5, 0x02, 0x9f, 0x66, 0x34, 0xd8, 0x60, 0x34, 0xcd, 0x24, 0x26,
-	0xac, 0x86, 0x88, 0x3b, 0x77, 0xf8, 0x27, 0xc6, 0xed, 0xe8, 0x9e, 0x0c, 0xed, 0x15, 0x9b, 0x00,
-	0x53, 0x3b, 0xb7, 0x26, 0xbe, 0x82, 0xaf, 0xe3, 0x0b, 0x9a, 0x4e, 0x87, 0x16, 0xdc, 0xb5, 0xe7,
-	0xfe, 0xee, 0x99, 0x73, 0x0f, 0x1c, 0xa9, 0xf5, 0x4a, 0xe7, 0x29, 0xbd, 0x6f, 0x44, 0x96, 0x6b,
-	0xd2, 0xec, 0xdf, 0x52, 0x19, 0x4c, 0x14, 0xa9, 0xf1, 0xf9, 0x4a, 0xeb, 0xd5, 0x1a, 0xa7, 0x56,
-	0x5f, 0x16, 0x6f, 0x53, 0xdc, 0x64, 0xf4, 0x55, 0x61, 0xfc, 0xc7, 0x83, 0x60, 0xbe, 0x5b, 0x65,
-	0xff, 0xa1, 0x9d, 0x26, 0xa1, 0x17, 0x79, 0x13, 0x5f, 0xb6, 0xd3, 0x84, 0x31, 0xe8, 0x6e, 0xd5,
-	0x06, 0xc3, 0x76, 0xe4, 0x4d, 0x02, 0x69, 0xbf, 0x59, 0x04, 0x83, 0x38, 0x57, 0x84, 0xc9, 0x42,
-	0xd1, 0x82, 0x4c, 0xd8, 0x89, 0xbc, 0x49, 0x47, 0x42, 0xa5, 0xcd, 0xe9, 0xd5, 0x30, 0x0e, 0xc3,
-	0x22, 0x4b, 0xf6, 0x90, 0xae, 0x45, 0xfa, 0x4e, 0xb4, 0xcc, 0x05, 0x40, 0x9c, 0xa3, 0x63, 0x42,
-	0xdf, 0xfa, 0x07, 0x4e, 0x99, 0x53, 0x39, 0x6e, 0x2c, 0xc2, 0x5e, 0x35, 0xae, 0xf7, 0xf9, 0x15,
-	0x0c, 0xef, 0x75, 0xb1, 0x25, 0x89, 0x26, 0xd3, 0x5b, 0x83, 0xec, 0x14, 0xfc, 0xb8, 0x14, 0x5c,
-	0xf6, 0xea, 0x87, 0x5f, 0xc2, 0xe0, 0x09, 0xe9, 0xf9, 0x41, 0xe2, 0x47, 0x81, 0x86, 0xfe, 0x9e,
-	0xc7, 0xef, 0x60, 0xe8, 0xe6, 0xce, 0xe6, 0x1a, 0x82, 0xba, 0x47, 0xcb, 0xf5, 0x67, 0x27, 0x62,
-	0x57, 0xa4, 0xa8, 0x7b, 0x92, 0x0d, 0x35, 0xfb, 0xf6, 0xe0, 0xb8, 0x1e, 0xbc, 0x60, 0xfe, 0x99,
-	0xc6, 0xc8, 0x6e, 0xc1, 0xb7, 0xf9, 0xd8, 0x48, 0x54, 0xe5, 0x8b, 0x5d, 0xf9, 0xe2, 0xb1, 0x2c,
-	0x7f, 0x7c, 0xd6, 0xb8, 0x1e, 0x1c, 0xc2, 0x5b, 0xe5, 0xae, 0x0d, 0xc5, 0x46, 0x0d, 0xb3, 0x7f,
-	0xc5, 0xfe, 0xee, 0x41, 0x7a, 0xde, 0x5a, 0xf6, 0xec, 0x33, 0x37, 0xbf, 0x01, 0x00, 0x00, 0xff,
-	0xff, 0x48, 0x39, 0x40, 0xae, 0x0e, 0x02, 0x00, 0x00,
+	// 316 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x91, 0xdd, 0x4a, 0xfb, 0x40,
+	0x10, 0xc5, 0xff, 0xdb, 0x2f, 0xfe, 0x99, 0x56, 0x2b, 0xdb, 0xa2, 0xa1, 0x52, 0x89, 0x0b, 0x42,
+	0xaf, 0xb6, 0x58, 0x9f, 0xa0, 0x88, 0x88, 0x37, 0x0a, 0xd1, 0xfb, 0xb2, 0x4d, 0xc6, 0x1a, 0x68,
+	0xb2, 0x31, 0xbb, 0x11, 0x7c, 0xae, 0xbe, 0xa0, 0x64, 0xf3, 0xb1, 0xb5, 0xd8, 0xbb, 0x64, 0xce,
+	0x6f, 0x0e, 0xe7, 0xec, 0xc0, 0x50, 0x6c, 0x37, 0x32, 0x8b, 0xf4, 0x47, 0xcc, 0xd3, 0x4c, 0x6a,
+	0x49, 0xff, 0xaf, 0x85, 0xc2, 0x50, 0x68, 0x31, 0xb9, 0xdc, 0x48, 0xb9, 0xd9, 0xe2, 0xdc, 0xcc,
+	0xd7, 0xf9, 0xfb, 0x1c, 0xe3, 0x54, 0x7f, 0x97, 0x18, 0xdb, 0x11, 0x70, 0x96, 0xf5, 0x2a, 0x3d,
+	0x85, 0x56, 0x14, 0xba, 0xc4, 0x23, 0xb3, 0xae, 0xdf, 0x8a, 0x42, 0x4a, 0xa1, 0x93, 0x88, 0x18,
+	0xdd, 0x96, 0x47, 0x66, 0x8e, 0x6f, 0xbe, 0xa9, 0x07, 0x83, 0x20, 0x13, 0x1a, 0xc3, 0x95, 0xd0,
+	0x2b, 0xad, 0xdc, 0xb6, 0x47, 0x66, 0x6d, 0x1f, 0xca, 0xd9, 0x52, 0xbf, 0x29, 0xca, 0xe0, 0x24,
+	0x4f, 0xc3, 0x3d, 0xa4, 0x63, 0x90, 0x7e, 0x35, 0x34, 0xcc, 0x14, 0x20, 0xc8, 0xb0, 0x62, 0xdc,
+	0xae, 0xf1, 0x77, 0xaa, 0xc9, 0x52, 0x17, 0xb2, 0xb5, 0x70, 0x7b, 0xa5, 0xdc, 0xec, 0xb3, 0x39,
+	0x5c, 0xdc, 0xcb, 0x3c, 0xd1, 0x4d, 0x72, 0xe5, 0xa3, 0x4a, 0x65, 0xa2, 0x90, 0x8e, 0xa1, 0x1b,
+	0x14, 0x52, 0xd5, 0xa2, 0xfc, 0x61, 0x37, 0x30, 0x7a, 0x44, 0x8b, 0xfb, 0xf8, 0x99, 0xa3, 0xd2,
+	0x87, 0x7d, 0xd9, 0x13, 0x8c, 0x7f, 0x63, 0x95, 0xe9, 0x2d, 0x38, 0xcd, 0xfb, 0x1a, 0xbc, 0xbf,
+	0x18, 0xf1, 0xfa, 0x81, 0xb9, 0xe5, 0x2d, 0xb5, 0xd8, 0x11, 0x38, 0x6b, 0x84, 0x57, 0xcc, 0xbe,
+	0xa2, 0x00, 0xe9, 0x33, 0x0c, 0x0f, 0x72, 0xd3, 0x73, 0x5e, 0x9e, 0x87, 0xd7, 0xe7, 0xe1, 0x0f,
+	0xc5, 0x79, 0x26, 0xd7, 0xd6, 0xff, 0x48, 0x55, 0xf6, 0x8f, 0xbe, 0xc0, 0x60, 0x3f, 0x2f, 0x9d,
+	0xda, 0xa5, 0x3f, 0xea, 0x4e, 0xae, 0x8e, 0xc9, 0xb5, 0xe1, 0xba, 0x67, 0x52, 0xdc, 0xfd, 0x04,
+	0x00, 0x00, 0xff, 0xff, 0x90, 0x61, 0x26, 0x69, 0x4f, 0x02, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -266,8 +266,8 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type AlgorithmServiceClient interface {
-	Count(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CountResponse, error)
-	GetID(ctx context.Context, in *GetIDRequest, opts ...grpc.CallOption) (*GetIDResponse, error)
+	CountAlgorithms(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CountAlgorithmsResponse, error)
+	GetAlgorithm(ctx context.Context, in *GetAlgorithmRequest, opts ...grpc.CallOption) (*GetAlgorithmResponse, error)
 }
 
 type algorithmServiceClient struct {
@@ -278,18 +278,18 @@ func NewAlgorithmServiceClient(cc *grpc.ClientConn) AlgorithmServiceClient {
 	return &algorithmServiceClient{cc}
 }
 
-func (c *algorithmServiceClient) Count(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CountResponse, error) {
-	out := new(CountResponse)
-	err := c.cc.Invoke(ctx, "/basedata.AlgorithmService/Count", in, out, opts...)
+func (c *algorithmServiceClient) CountAlgorithms(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CountAlgorithmsResponse, error) {
+	out := new(CountAlgorithmsResponse)
+	err := c.cc.Invoke(ctx, "/basedata.AlgorithmService/CountAlgorithms", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *algorithmServiceClient) GetID(ctx context.Context, in *GetIDRequest, opts ...grpc.CallOption) (*GetIDResponse, error) {
-	out := new(GetIDResponse)
-	err := c.cc.Invoke(ctx, "/basedata.AlgorithmService/GetID", in, out, opts...)
+func (c *algorithmServiceClient) GetAlgorithm(ctx context.Context, in *GetAlgorithmRequest, opts ...grpc.CallOption) (*GetAlgorithmResponse, error) {
+	out := new(GetAlgorithmResponse)
+	err := c.cc.Invoke(ctx, "/basedata.AlgorithmService/GetAlgorithm", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -298,57 +298,57 @@ func (c *algorithmServiceClient) GetID(ctx context.Context, in *GetIDRequest, op
 
 // AlgorithmServiceServer is the server API for AlgorithmService service.
 type AlgorithmServiceServer interface {
-	Count(context.Context, *empty.Empty) (*CountResponse, error)
-	GetID(context.Context, *GetIDRequest) (*GetIDResponse, error)
+	CountAlgorithms(context.Context, *empty.Empty) (*CountAlgorithmsResponse, error)
+	GetAlgorithm(context.Context, *GetAlgorithmRequest) (*GetAlgorithmResponse, error)
 }
 
 // UnimplementedAlgorithmServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedAlgorithmServiceServer struct {
 }
 
-func (*UnimplementedAlgorithmServiceServer) Count(ctx context.Context, req *empty.Empty) (*CountResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Count not implemented")
+func (*UnimplementedAlgorithmServiceServer) CountAlgorithms(ctx context.Context, req *empty.Empty) (*CountAlgorithmsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CountAlgorithms not implemented")
 }
-func (*UnimplementedAlgorithmServiceServer) GetID(ctx context.Context, req *GetIDRequest) (*GetIDResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetID not implemented")
+func (*UnimplementedAlgorithmServiceServer) GetAlgorithm(ctx context.Context, req *GetAlgorithmRequest) (*GetAlgorithmResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetAlgorithm not implemented")
 }
 
 func RegisterAlgorithmServiceServer(s *grpc.Server, srv AlgorithmServiceServer) {
 	s.RegisterService(&_AlgorithmService_serviceDesc, srv)
 }
 
-func _AlgorithmService_Count_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AlgorithmService_CountAlgorithms_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(empty.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AlgorithmServiceServer).Count(ctx, in)
+		return srv.(AlgorithmServiceServer).CountAlgorithms(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/basedata.AlgorithmService/Count",
+		FullMethod: "/basedata.AlgorithmService/CountAlgorithms",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AlgorithmServiceServer).Count(ctx, req.(*empty.Empty))
+		return srv.(AlgorithmServiceServer).CountAlgorithms(ctx, req.(*empty.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AlgorithmService_GetID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetIDRequest)
+func _AlgorithmService_GetAlgorithm_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAlgorithmRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AlgorithmServiceServer).GetID(ctx, in)
+		return srv.(AlgorithmServiceServer).GetAlgorithm(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/basedata.AlgorithmService/GetID",
+		FullMethod: "/basedata.AlgorithmService/GetAlgorithm",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AlgorithmServiceServer).GetID(ctx, req.(*GetIDRequest))
+		return srv.(AlgorithmServiceServer).GetAlgorithm(ctx, req.(*GetAlgorithmRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -358,12 +358,12 @@ var _AlgorithmService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*AlgorithmServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "Count",
-			Handler:    _AlgorithmService_Count_Handler,
+			MethodName: "CountAlgorithms",
+			Handler:    _AlgorithmService_CountAlgorithms_Handler,
 		},
 		{
-			MethodName: "GetID",
-			Handler:    _AlgorithmService_GetID_Handler,
+			MethodName: "GetAlgorithm",
+			Handler:    _AlgorithmService_GetAlgorithm_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -11,20 +11,20 @@ message Algorithm {
     string updated_at = 6;
 }
 
-message CountResponse {
+message CountAlgorithmsResponse {
     int32 count = 1;
 }
 
-message GetIDRequest {
+message GetAlgorithmRequest {
     int32 id = 1;
 }
 
-message GetIDResponse {
+message GetAlgorithmResponse {
     Algorithm algorithm = 1;
 }
 
 
 service AlgorithmService {
-    rpc Count (google.protobuf.Empty) returns (CountResponse) {}
-    rpc GetID (GetIDRequest) returns (GetIDResponse) {}
+    rpc CountAlgorithms(google.protobuf.Empty) returns (CountAlgorithmsResponse) {}
+    rpc GetAlgorithm (GetAlgorithmRequest) returns (GetAlgorithmResponse) {}
 }

@@ -24,23 +24,23 @@ message POW_Coin {
 
 
 
-message CountResponse {
+message CountPowCoinsResponse {
     int32 total = 1;
 }
 
-message GetIDRequest {
+message GetPowCoinRequest {
     int32 id = 1;
 }
 
-message GetIDResponse {
+message GetPowCoinResponse {
     POW_Coin coin = 1;
 }
 
 
 
 service POWCoinService {
-    rpc Count (google.protobuf.Empty) returns (CountResponse) {
+    rpc Count (google.protobuf.Empty) returns (CountPowCoinsResponse) {
     }
-    rpc GetID (GetIDRequest) returns (GetIDResponse) {
+    rpc GetID (GetPowCoinRequest) returns (GetPowCoinResponse) {
     }
 }
