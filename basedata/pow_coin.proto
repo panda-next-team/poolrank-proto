@@ -2,7 +2,7 @@ syntax = "proto3";
 import "google/protobuf/empty.proto";
 package basedata;
 
-message POW_Coin {
+message Pow_Coin {
     int32 id = 1;
     string name = 2;
     string en_name = 3;
@@ -32,7 +32,7 @@ message GetPowCoinRequest {
 }
 
 message GetPowCoinResponse {
-    POW_Coin coin = 1;
+    Pow_Coin coin = 1;
 }
 
 
