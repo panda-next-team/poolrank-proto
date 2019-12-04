@@ -40,7 +40,7 @@ message PoolCoinbaseTag {
 
 
 message CountPoolsResponse {
-    int32 total = 1;
+    int32 count = 1;
 }
 
 message GetPoolRequest {

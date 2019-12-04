@@ -25,7 +25,7 @@ message Pow_Coin {
 
 
 message CountPowCoinsResponse {
-    int32 total = 1;
+    int32 count = 1;
 }
 
 message GetPowCoinRequest {
