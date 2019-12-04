@@ -63,7 +63,7 @@ message GetPoolAddressesResponse {
 }
 
 message GetPoolCoinbaseTagsRequest {
-    int32 id = 1;
+    int32 pool_id = 1;
 }
 
 message GetPoolCoinbaseTagsResponse {
