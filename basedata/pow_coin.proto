@@ -9,7 +9,7 @@ message Pow_Coin {
     string en_tag = 4;
     double max_supply = 5;
     int32 algorithm_id = 6;
-    string block_time = 7;
+    int32 block_time = 7;
     string website_url = 8;
     string github_url = 9;
     string release_date = 10;
