@@ -1,0 +1,34 @@
+syntax = "proto3";
+package agent;
+
+
+message Quote {
+    int32 id = 1;
+    string en_tag = 2;
+    double circulating_supply = 3;
+    int32 num_marker_pairs = 4;
+    int32 cmc_rank = 5;
+    double eur_price = 6;
+    double volume_24h = 7;
+    double percent_change_1h = 8;
+    double percent_change_24h = 9;
+    double percent_change_7d = 10;
+    double market_cap = 11;
+    int64 crated_at_ts = 12;
+    int64 updated_at_ts = 13;
+    string created_at = 14;
+    string updated_at = 15;
+}
+
+message GetQuoteRequest {
+    string en_tag = 1;
+}
+
+message GetQuoteResponse {
+    Quote quote = 1;
+}
+
+service CoinMaraketCapService {
+    rpc GetQuote (GetQuoteRequest) returns (GetQuoteResponse) {
+    }
+}
