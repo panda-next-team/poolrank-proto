@@ -36,10 +36,19 @@ message GetPowCoinResponse {
     Pow_Coin coin = 1;
 }
 
+message GetPowCoinIDRequest {
+    string  en_tag = 1;
+}
+
+message GetPowCoinIDResponse {
+    int32 id  = 1;
+}
 
 service POWCoinService {
     rpc CountPowCoins (google.protobuf.Empty) returns (CountPowCoinsResponse) {
     }
     rpc GetPowCoin (GetPowCoinRequest) returns (GetPowCoinResponse) {
+    }
+    rpc GetPowCoinID (GetPowCoinIDRequest) returns (GetPowCoinIDResponse) {
     }
 }
