@@ -10,16 +10,18 @@ message BlockStats {
     string net_hash = 5;
     string net_hash_one_day = 6;
     string net_hash_half_week = 7;
-    string net_hash_two_week = 8;
-    double reward_per_unit = 9;
-    double previous_difficulty = 10;
-    string latest_difficulty_change = 11;
-    int32 latest_difficulty_change_ts = 12;
-    int32 next_difficulty_change_seconds = 13;
+    string net_hash_one_week = 8;
+    string net_hash_two_week = 9;
+    double reward_per_unit = 10;
+    double previous_difficulty = 11;
+    string latest_difficulty_change = 12;
+    int32 latest_difficulty_change_ts = 13;
+    int32 next_difficulty_change_seconds = 14;
+    int32 updated_ts = 15;
 }
 
 message GetBlockStatsRequest {
-    int32 coin_id  = 1;
+    int32 coin_id = 1;
 }
 
 message GetBlockStatsResponse {
