@@ -1,0 +1,60 @@
+syntax = "proto3";
+package stats;
+import "google/protobuf/any.proto";
+
+message OptBlock {
+    string id = 1;
+    string hash = 2;
+    int32 height = 3;
+    string previous_hash = 4;
+    int32 size = 5;
+    double difficulty = 6;
+    int32 pool_id = 7;
+    string identify_pool_mode = 8;
+    int64 coinbase_value = 9;
+    int64 coinbase_fee = 10;
+    int64 coinbase_reward = 11;
+    int64 coinbase_estimated_reward = 12;
+    int32 version = 13;
+    int32 tx_count = 14;
+    int32 timestamp = 15;
+    int32 created_at_ts = 16;
+    int32 updated_at_ts = 17;
+    int32 median_at_ts = 18;
+}
+
+message ListOptBlocksRequest {
+    enum QueryField {
+        POOL_ID = 0;
+        HEIGHT = 1;
+        TIMESTAMP = 2;
+        MEDIAN_AT_TS = 3;
+    };
+
+    enum QueryOperator {
+        EQ = 0;
+        NE = 1;
+        GT = 2;
+        LT = 3;
+        LE = 4;
+        GE = 5;
+    };
+
+    message Query {
+        QueryField field = 1;
+        QueryOperator operator = 2;
+        google.protobuf.Any value = 3;
+    };
+
+    repeated Query queries = 1;
+}
+
+message ListOptBlocksResponse {
+    repeated OptBlock optBlocks = 1;
+}
+
+
+service OptBlockService {
+    rpc ListOptBlocks (ListOptBlocksRequest) returns (ListOptBlocksResponse) {
+    }
+}
