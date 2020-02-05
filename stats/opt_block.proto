@@ -25,11 +25,22 @@ message OptBlock {
 
 message ListOptBlocksRequest {
     enum QueryField {
-        POOL_ID = 0;
-        HEIGHT = 1;
-        TIMESTAMP = 2;
-        MEDIAN_AT_TS = 3;
+        Q_POOL_ID = 0;
+        Q_HEIGHT = 1;
+        Q_TIMESTAMP = 2;
+        Q_MEDIAN_AT_TS = 3;
     };
+
+    enum SortField {
+        S_HEIGHT = 0;
+        S_SIZE = 1;
+        S_TX_COUNT = 2;
+    }
+
+    enum SortDirection {
+        ASC = 0;
+        DESC = 1;
+    }
 
     enum QueryOperator {
         EQ = 0;
@@ -46,11 +57,21 @@ message ListOptBlocksRequest {
         google.protobuf.Any value = 3;
     };
 
+    message Sort {
+        SortField field = 1;
+        SortDirection direction = 2;
+    }
+
     repeated Query queries = 1;
+    repeated Sort sorts = 2;
+    int32 limit = 3;
+    int32 skip = 4;
+    bool onlyTotal = 5;
 }
 
 message ListOptBlocksResponse {
     repeated OptBlock optBlocks = 1;
+    int32 total = 2;
 }
 
 
