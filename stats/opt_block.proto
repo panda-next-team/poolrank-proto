@@ -51,6 +51,18 @@ message ListOptBlocksRequest {
         GE = 5;
     };
 
+    message QueryInt32Value {
+        int32 value = 1;
+    }
+
+    message QueryDoubleValue {
+        double value = 1;
+    }
+
+    message QueryStringValue {
+        string value = 1;
+    }
+
     message Query {
         QueryField field = 1;
         QueryOperator operator = 2;
