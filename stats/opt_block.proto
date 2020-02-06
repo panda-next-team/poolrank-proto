@@ -45,8 +45,8 @@ message ListOptBlocksRequest {
     enum QueryOperator {
         EQ = 0;
         NE = 1;
-        GT = 2;
-        LT = 3;
+        GTE = 2;
+        LTE = 3;
         LE = 4;
         GE = 5;
     };
