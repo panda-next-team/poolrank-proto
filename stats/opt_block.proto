@@ -47,8 +47,8 @@ message ListOptBlocksRequest {
         NE = 1;
         GTE = 2;
         LTE = 3;
-        LE = 4;
-        GE = 5;
+        LT = 4;
+        GT = 5;
     };
 
     message QueryInt32Value {
