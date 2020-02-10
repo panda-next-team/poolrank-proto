@@ -17,7 +17,8 @@ message BlockStats {
     string latest_difficulty_change = 12;
     int32 latest_difficulty_change_ts = 13;
     int32 next_difficulty_change_seconds = 14;
-    int32 updated_ts = 15;
+    int32 next_difficulty_remain_block = 15;
+    int32 updated_ts = 16;
 }
 
 message GetBlockStatsRequest {
