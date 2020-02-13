@@ -21,6 +21,15 @@ message GetRateResponse {
     Rate rate = 1;
 }
 
+message GetRatesRequest {
+    string base = 1;
+}
+
+message GetRatesResponse {
+    repeated Rate rates = 1;
+}
+
 service FixerService {
     rpc GetRate (GetRateRequest) returns (GetRateResponse) {}
+    rpc GetRates (GetRatesRequest) returns (GetRatesResponse) {}
 }
