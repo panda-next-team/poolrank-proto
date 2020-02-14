@@ -7,11 +7,11 @@ message BlockStats {
     int32 coin_id = 2;
     int32 latest_height = 3;
     double latest_difficulty = 4;
-    string net_hash = 5;
-    string net_hash_one_day = 6;
-    string net_hash_half_week = 7;
-    string net_hash_one_week = 8;
-    string net_hash_two_week = 9;
+    double net_hash = 5;
+    double net_hash_one_day = 6;
+    double net_hash_half_week = 7;
+    double net_hash_one_week = 8;
+    double net_hash_two_week = 9;
     double reward_per_unit = 10;
     double previous_difficulty = 11;
     string latest_difficulty_change = 12;
