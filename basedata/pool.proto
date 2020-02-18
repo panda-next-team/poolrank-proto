@@ -79,6 +79,18 @@ message GetPoolCoinbaseTagsResponse {
     repeated PoolCoinbaseTag tags = 1;
 }
 
+message AddPoolCoinbaseAddressRequest {
+    string address = 1;
+    int32 pool_id = 2;
+    int32 coin_id = 3;
+    int32 type = 4;
+}
+
+message AddPoolCoinbaseAddressResponse {
+    bool result = 1;
+}
+
+
 service PoolService {
     rpc CountPools (google.protobuf.Empty) returns (CountPoolsResponse) {
     }
@@ -87,5 +99,8 @@ service PoolService {
     rpc GetPoolAddresses (GetPoolAddressesRequest) returns (GetPoolAddressesResponse) {
     }
     rpc GetPoolCoinbaseTags (GetPoolCoinbaseTagsRequest) returns (GetPoolCoinbaseTagsResponse) {
+    }
+    rpc AddPoolCoinbaseAddress (AddPoolCoinbaseAddressRequest) returns (AddPoolCoinbaseAddressResponse) {
+
     }
 }
