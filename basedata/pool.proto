@@ -83,7 +83,7 @@ message AddPoolCoinbaseAddressRequest {
     string address = 1;
     int32 pool_id = 2;
     int32 coin_id = 3;
-    int32 type = 4;
+    AddressType type = 4;
 }
 
 message AddPoolCoinbaseAddressResponse {
