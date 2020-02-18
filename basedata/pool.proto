@@ -39,7 +39,7 @@ message PoolAddress {
 message PoolCoinbaseTag {
     int32 id = 1;
     int32 pool_id = 2;
-    string tag = 3;
+    bytes tag = 3;
     int32 created_at_ts = 4;
     int32 updated_at_ts = 5;
     string created_at = 6;
