@@ -136,6 +136,10 @@ message ListPoolsRequest {
         google.protobuf.Any value = 3;
     };
 
+    message QueryBoolValue {
+        bool value = 1;
+    }
+
     repeated Query queries = 1;
     repeated Sort sorts = 2;
     int32 limit = 3;
