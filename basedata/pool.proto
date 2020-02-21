@@ -1,5 +1,6 @@
 syntax = "proto3";
 import "google/protobuf/empty.proto";
+import "google/protobuf/any.proto";
 package basedata;
 
 enum AddressType {
@@ -90,6 +91,58 @@ message AddPoolCoinbaseAddressResponse {
     bool result = 1;
 }
 
+message ListPoolsResponse {
+    repeated Pool pools = 1;
+    int32 total = 2;
+
+}
+
+
+message ListPoolsRequest {
+    enum SortField {
+        S_ID = 0;
+        S_LIST_ORDER = 1;
+        S_CREATED_AT_TS = 2;
+        S_UPDATED_AT_TS = 3;
+    }
+
+    enum SortDirection {
+        ASC = 0;
+        DESC = 1;
+    }
+
+    enum QueryField {
+        Q_STATUS = 0;
+
+    };
+
+    message Sort {
+        SortField field = 1;
+        SortDirection direction = 2;
+    }
+
+    enum QueryOperator {
+        EQ = 0;
+        NE = 1;
+        GTE = 2;
+        LTE = 3;
+        LT = 4;
+        GT = 5;
+    };
+
+    message Query {
+        QueryField field = 1;
+        QueryOperator operator = 2;
+        google.protobuf.Any value = 3;
+    };
+
+    repeated Query queries = 1;
+    repeated Sort sorts = 2;
+    int32 limit = 3;
+    int32 skip = 4;
+    bool onlyTotal = 5;
+}
+
 
 service PoolService {
     rpc CountPools (google.protobuf.Empty) returns (CountPoolsResponse) {
@@ -102,5 +155,7 @@ service PoolService {
     }
     rpc AddPoolCoinbaseAddress (AddPoolCoinbaseAddressRequest) returns (AddPoolCoinbaseAddressResponse) {
 
+    }
+    rpc ListPools (ListPoolsRequest) returns (ListPoolsResponse) {
     }
 }
